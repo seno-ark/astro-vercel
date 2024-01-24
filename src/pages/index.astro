@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Main from '../components/Main.astro';
 
 const siteName = "Astor";
 const title = `Welcome to ${siteName}`;
@@ -9,9 +11,8 @@ const data = {
 }
 ---
 <BaseLayout data={data}>
-    
-    <main class="container">
+    <Header title={data.title}></Header>
+    <Main>
         <p>:)</p>
-    </main>
-
+    </Main>
 </BaseLayout>

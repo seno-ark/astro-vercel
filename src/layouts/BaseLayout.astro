@@ -1,6 +1,5 @@
 ---
 import Nav from '../components/Nav.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const { data } = Astro.props;
@@ -20,7 +19,6 @@ const { data } = Astro.props;
 	</head>
 	<body>
         <Nav></Nav>
-        <Header title={data.title}></Header>
 		<slot />
         <Footer siteName={data.siteName}></Footer>
 	</body>
