@@ -1,0 +1,11 @@
+---
+interface Props {
+	siteName: string;
+}
+
+const { siteName } = Astro.props;
+---
+<footer class="container">
+    <p>Build with Astro, Htmx, Alpine.js, and PicoCSS.</p>
+    <small>&copy 2024 {siteName}</small>
+</footer>

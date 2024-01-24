@@ -1,0 +1,27 @@
+---
+import Nav from '../components/Nav.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const { data } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{data.title}</title>
+        <link rel="stylesheet" href="pico.min.css">
+        <script src="https://unpkg.com/htmx.org@1.9.10/dist/htmx.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	</head>
+	<body>
+        <Nav></Nav>
+        <Header title={data.title}></Header>
+		<slot />
+        <Footer siteName={data.siteName}></Footer>
+	</body>
+</html>

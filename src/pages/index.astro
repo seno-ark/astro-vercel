@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const siteName = "Astor";
+const title = `Welcome to ${siteName}`;
+const data = {
+    title,
+    siteName
+}
+---
+<BaseLayout data={data}>
+    
+    <main class="container">
+        <p>:)</p>
+    </main>
+
+</BaseLayout>
